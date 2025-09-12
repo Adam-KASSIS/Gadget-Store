@@ -1,10 +1,10 @@
-# Paradise Nursery Shopping Cart App
+# Tech Paradise
 
 Live Demo: [https://adam-kassis.github.io/paradise-nursery-shopping-cart-app/](https://adam-kassis.github.io/paradise-nursery-shopping-cart-app/)
 
 ## Description
 
-A simple React shopping cart application for Paradise Nursery. Built with React, Redux Toolkit, and Vite.
+A simple React Gadget Store cart application for Tech Paradise. Built with React, Redux Toolkit, and Vite.
 
 ## Features
 
@@ -27,13 +27,13 @@ A simple React shopping cart application for Paradise Nursery. Built with React,
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/Adam-KASSIS/paradise-nursery-shopping-cart-app.git
+git clone https://github.com/Adam-KASSIS/Gadget-Store.git
 ```
 
 2. Navigate into the project folder:
 
 ```bash
-cd paradise-nursery-shopping-cart-app
+cd Gadget-Store
 ```
 
 3. Install dependencies:
