@@ -1,0 +1,185 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base HTML/body */
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: sans-serif;
+  background-color: #0a0a0a; /* prevents white flash */
+}
+
+/* Landing Page */
+.landing-page {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  background: #0a0a0a;
+  overflow: hidden;
+}
+
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #0f0f0f, #000000);
+  background-image: url('./assets/Background/background.png');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.6) blur(2px);
+  z-index: 0;
+}
+
+/* Centered content */
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* Hero section */
+.hero_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(10px, 2vh, 20px);
+  width: 100%;
+  flex-grow: 1; /* occupy available space */
+  padding: 5vh 2vw 5vh; /* top and bottom padding */
+}
+
+/* Title */
+.hero_section h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: #00ffe0;
+  text-shadow: 0 0 15px rgba(0, 255, 224, 0.8);
+  line-height: 1.1;
+  margin-bottom: clamp(8px, 1.5vh, 15px);
+  z-index: 5;
+}
+
+/* Paragraph */
+.hero_section p {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  color: #ccc;
+  line-height: 1.5;
+  margin-bottom: clamp(10px, 2vh, 20px);
+  max-width: 90vw;
+}
+
+/* Divider */
+.divider {
+  width: clamp(60px, 15vw, 80px);
+  height: clamp(2px, 0.3vh, 3px);
+  margin: clamp(10px, 2vh, 20px) auto;
+  background: linear-gradient(90deg, #00ffe0, #0077ff);
+  box-shadow: 0 0 15px #00ffe0;
+}
+
+/* Button */
+.get-started-button {
+  padding: clamp(10px, 1.5vh, 15px) clamp(25px, 5vw, 40px);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #00ffe0, #0077ff);
+  color: #000;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  min-width: fit-content;
+}
+
+.get-started-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(0, 255, 224, 0.9);
+}
+
+/* About Us container fills remaining viewport */
+.aboutus_container {
+  flex-grow: 1; /* occupy remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertically centered */
+  align-items: center;
+  color: #fff;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  line-height: 1.6;
+  max-width: 90vw;
+  text-align: center;
+  padding: 2vh 2vw;
+
+
+}
+
+/* Paragraphs inside About Us */
+.aboutus_container p {
+  margin-bottom: 1.5rem;
+  font-size: inherit;
+}
+
+/* Product List Overlay */
+.product-list-container {
+  position: absolute;
+  top: 100vh;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(15, 15, 15, 0.95);
+  backdrop-filter: blur(8px);
+  transition: top 0.6s ease;
+  overflow-y: auto;
+  z-index: 2;
+  padding: 2vh 2vw;
+}
+
+.product-list-container.visible {
+  top: 0;
+}
+
+/* Fade-out landing */
+.landing-page.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background-color: #0a0a0a;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .hero_section h1 { font-size: clamp(1.8rem, 6vw, 2.8rem); }
+  .hero_section p { font-size: clamp(0.95rem, 4vw, 1.4rem); }
+  .get-started-button { padding: clamp(8px, 1.2vh, 12px) clamp(20px, 4vw, 30px); font-size: clamp(0.9rem, 3.5vw, 1.1rem); }
+  .divider { width: clamp(50px, 12vw, 70px); margin: clamp(8px, 1.5vh, 15px) auto; }
+}
+
+@media screen and (max-width: 480px) {
+  .hero_section h1 { font-size: clamp(1.6rem, 8vw, 2.4rem); }
+  .hero_section p { font-size: clamp(0.9rem, 4vw, 1.2rem); }
+  .aboutus_container { font-size: clamp(1.2rem, 4vw, 1.8rem); }
+}
+
+
+/* Landing fade-out */
+.landing-page.fade-out {
+  opacity: 0;
+  transition: opacity 0.3s ease; /* fast fade */
+  background-color: #0a0a0a; /* no white flash */
+}
+
+/* Optional: smooth scroll for all elements */
+html {
+  scroll-behavior: smooth;
+}

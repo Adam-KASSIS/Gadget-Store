@@ -1,0 +1,61 @@
+/* FINAL SOLUTION - Proper integration with existing layout */
+
+.aboutus_container {
+  /* Remove absolute positioning - integrate with existing layout */
+  position: relative !important;
+  
+  /* Use the centering that worked */
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  
+  /* Layout properties */
+  flex-grow: 1 !important; /* occupy remaining space like before */
+  width: 100% !important;
+  max-width: 90vw !important;
+  margin: 0 auto !important; /* This is the key centering */
+  
+  /* Content styling */
+  color: #fff !important;
+  font-size: clamp(1.4rem, 3vw, 2rem) !important;
+  line-height: 1.6 !important;
+  text-align: center !important;
+  padding: 2vh 2vw !important;
+  
+  /* Remove debug styling */
+  background: none !important;
+  border: none !important;
+}
+
+.aboutus_container p {
+  margin-bottom: 1.5rem !important;
+  font-size: inherit !important;
+  width: 100% !important;
+  max-width: 800px !important; /* Limit paragraph width */
+  text-align: center !important;
+}
+
+.about-us-description {
+  font-size: clamp(2rem, 5vw, 3.5rem) !important;
+  font-weight: 700 !important;
+  color: #00ffe0 !important;
+  text-shadow: 0 0 15px rgba(0, 255, 224, 0.8) !important;
+  line-height: 1.1 !important;
+  margin-bottom: clamp(20px, 3vh, 30px) !important;
+  text-align: center !important;
+  width: 100% !important;
+  max-width: 800px !important;
+}
+
+/* Ensure parent container centers children */
+.content {
+  position: relative;
+  z-index: 1;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important; /* This ensures aboutus_container is centered */
+  text-align: center;
+  color: #fff;
+  min-height: 100vh;
+}
