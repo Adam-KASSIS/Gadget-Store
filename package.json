@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Adam-KASSIS.github.io/paradise-nursery-shopping-cart-app",
+  "homepage": "https://Adam-KASSIS.github.io/Gadget-Store",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
