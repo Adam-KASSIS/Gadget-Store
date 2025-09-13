@@ -44,7 +44,7 @@ function App() {
           <div className="landing_content hero_section">
             <h1>Paradise Tech</h1>
             <div className="divider"></div>
-            <p>Innovation Rooted in Nature</p>
+            <p>Naturally Innovative</p>
             <button
               className="get-started-button"
               onClick={handleGetStartedClick}
